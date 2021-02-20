@@ -1,0 +1,505 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Raleway:ital,wght@0,400;1,200&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --gray: #aaa;
+    --detail: #8c8c8c;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    overflow-x: hidden;
+}
+
+h1, h2 {
+    font-family: 'Abril Fatface', cursive;
+}
+
+p {
+    font-family: 'Raleway', sans-serif;
+}
+
+.navbar {
+    padding: 2rem;
+}
+
+#navbar-logo {
+    font-family: 'Abril Fatface', cursive;
+    font-size: 1.3rem;
+}
+
+.navbar a {
+    color: black;
+    text-decoration: none;
+}
+
+.nav-links {
+    padding: 0;
+    font-size: 1.6rem;
+}
+
+.navbar li {
+    list-style: 0;
+}
+
+#navbar-toggle {
+    top: 2rem;
+    right: 2rem;
+    z-index: 999;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    background: black;
+    width: 33px;
+    height: 4px;
+    margin: 5px;
+    z-index: 999;
+    transition: 0.3s ease-in-out;
+}
+
+#sidebar {
+    position: fixed;
+    background: black;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    right: -100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: 0.2s ease-in-out;
+    z-index: 99;
+}
+
+
+.icons-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#sidebar a {
+    color: white;
+    margin: 0 8px;
+}
+
+#sidebar.show-side {
+    right: 0;
+}
+
+.open .bar {
+    background: white;
+}
+
+#navbar-toggle.open span:nth-child(2) {
+    opacity: 0;
+}
+
+#navbar-toggle.open span:nth-child(1) {
+    transform: rotate(-45deg) translateY(12px);
+}
+
+#navbar-toggle.open span:nth-child(3) {
+    transform: rotate(45deg) translateY(-13px);
+}
+
+.contact-icons {
+    display: none;
+}
+
+#home {
+    padding: 80px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#home h4 {
+    text-transform: uppercase;
+    font-size: 3rem;
+    font-weight: bold;
+    letter-spacing: 6px;
+    margin: 0;
+}
+
+.bottom-line {
+    color: var(--gray);
+    text-transform: uppercase;
+    letter-spacing: 8px;
+}
+
+#home h1 {
+    font-size: 2.4rem;
+    margin: 3rem 0 2rem 0;
+}
+
+.home-container {
+    padding: 0 2rem;
+}
+
+.btn-container {
+    margin-top: 1.2rem;
+}
+
+.btn {
+    padding: 8px 16px;
+    text-transform: uppercase;
+}
+
+.btn:hover {
+    background: var(--detail);
+    border: 3px solid var(--detail);
+    transition: 0.3s ease-in-out;
+}
+
+.btn i {
+    margin-left: 5px;
+}
+
+.btn-primary {
+    background: black;
+    border: 3px solid black;
+    margin-right: 8px;
+}
+
+.btn-secondary {
+    background: white;
+    border: 3px solid var(--gray);
+    color: var(--gray);
+}
+
+.carousel {
+    margin-top: 80px;
+}
+
+#service {
+    margin: 80px 0;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#service h2 {
+    font-size: 3rem;
+    letter-spacing: 6px;
+    margin: 0;
+}
+
+#service-one {
+    margin-top: 3rem;
+}
+
+.service {
+    margin-bottom: 4rem;
+}
+
+.card-title {
+    font-family: 'Abril Fatface', cursive;
+    letter-spacing: 2px;
+}
+
+.card-text {
+    color: rgb(87, 87, 87);
+}
+
+#gallery {
+    margin: 80px 0;
+    text-align: center;
+}
+
+#gallery h2 {
+    font-size: 3rem;
+    letter-spacing: 6px;
+    margin: 0;
+}
+
+#gallery img {
+    width: 175px;
+    margin-bottom: 5px;
+}
+
+#about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 2rem;
+    margin: 80px 0;
+    text-align: center;
+}
+
+#about h2 {
+    font-size: 3rem;
+    letter-spacing: 6px;
+    margin: 0;
+    text-align: center;
+}
+
+#about img {
+    width: 250px;
+    margin: 2rem auto;
+}
+
+.about-text {
+    padding: 0 1rem;
+    text-align: justify;
+}
+
+.about-icons {
+    display: none;
+}
+
+#contact {
+    margin: 80px 0;
+    text-align: center;
+    padding: 0 2rem;
+}
+
+#contact h2 {
+    font-size: 3rem;
+    letter-spacing: 6px;
+    margin: 0;
+}
+
+.social-icons a {
+    color: black;
+    margin: 0 0.5rem;
+}
+
+.footer {
+    background: black;
+    color: white;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px 0;
+}
+
+.footer h4 {
+    font-weight: bold;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer li {
+    list-style: none;
+}
+
+.footer-wrap {
+    margin: 2rem;
+}
+
+.footer-nav {
+    display: flex;
+}
+
+.copyright-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-icons {
+    margin: 0 1rem;
+}
+
+.footer-icons a {
+    margin: 0 5px;
+}
+
+
+@keyframes anim1 {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@media screen and (max-device-width: 320px) {
+    .btn-secondary {
+        display: none;
+    }
+}
+
+@media screen and (min-device-width: 768px) {
+    .home-child {
+        flex: 0 1 384px;
+    }
+
+    .carousel {
+        margin: 0;
+    }
+
+    .home-container {
+        margin-bottom: 80px;
+    }
+
+    .servizio-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 3rem;
+    }
+
+    #service-one {
+        margin-top: 0;
+    }
+
+    .card {
+        flex: 0 1 250px;
+        margin: 0 2rem;
+    }
+
+    .gallery-images {
+        margin-top: 4rem;
+    }
+
+    .about-content {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .about-child {
+        flex: 0 1 250px;
+        margin: 1rem;
+    }
+
+    .about-content {
+        margin-top: 2rem;
+    }
+
+    #about img {
+        width: 250px;
+        margin: 0;
+    }
+
+    #contact {
+        max-width: 500px;
+        margin: 80px auto;
+    }
+
+    .about-icons {
+        display: block;
+        padding-left: 1rem;
+        text-align: left;
+        margin-top: 2rem;
+    }
+
+    .about-icons a {
+        margin-right: 1rem;
+        color: black;
+    }
+
+}
+
+@media screen and (min-device-width: 1440px) {
+
+    #service,
+    #gallery,
+    #about,
+    #contact {
+        padding: 80px;
+        margin: 0;
+    }
+
+    p {
+        font-size: 1.4rem;
+    }
+
+    .navbar {
+        max-width: 1300px;
+        margin: auto;
+    }
+
+    #home h4 {
+        font-size: 6rem;
+    }
+
+    #home h1 {
+        font-size: 3.2rem;
+    }
+
+    .bottom-line {
+        font-size: 1.6rem;
+    }
+
+    .home-child {
+        flex: 0 1 500px;
+        margin: 0 2rem;
+    }
+
+    .btn-container {
+        margin-top: 2rem;
+    }
+
+    #service h2,
+    #gallery h2,
+    #contact h2,
+    #about h2 {
+        font-size: 4rem;
+    }
+    
+    #service {
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    #service h5 {
+        font-size: 1.6rem;
+    }
+
+    #service p {
+        font-size: 1rem;
+    }
+
+    #gallery {
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    #gallery img {
+        width: 250px;
+    }
+
+    #contact {
+        margin: auto;
+        max-width: 800px;
+    }
+
+    .about-child {
+        flex: 0 1 350px;
+    }
+
+    #about img {
+        width: 350px;
+    }
+
+    .about-icons a {
+        margin-right: 1rem;
+        color: black;
+    }
+}
