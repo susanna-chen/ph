@@ -345,12 +345,16 @@ p {
 }
 
 @media screen and (min-device-width: 768px) {
+    .btn-container {
+        margin-bottom: 80px;
+    }
+
     .home-child {
         flex: 0 1 384px;
     }
 
     .carousel {
-        margin: 0;
+        margin-top: 0;
     }
 
     .home-container {
@@ -412,6 +416,10 @@ p {
     .about-icons a {
         margin-right: 1rem;
         color: black;
+    }
+
+    .nav-link {
+        margin: 2rem;
     }
 
 }
